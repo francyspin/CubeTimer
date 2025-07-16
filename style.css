@@ -1,0 +1,121 @@
+/* Reset leggero */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* SCRAMBLE */
+.scramble-text {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.4rem;
+  color: #444;
+  word-break: break-word;
+}
+
+/* TIMER GRANDE */
+.timer-display {
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 600;
+  text-align: center;
+  color: #111;
+}
+
+/* TABELLA TEMPI */
+table {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+}
+
+/* Scramble box */
+.scramble-box {
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.scramble-text {
+    font-size: 1.25rem;
+    word-break: break-word;
+    /* va a capo su schermi piccoli */
+}
+
+/* Timer grande */
+.timer-display {
+    font-size: clamp(3rem, 8vw, 6rem);
+    /* grande e responsive */
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+/* Tabella solves: limite altezza con scroll se serve */
+#solvesTable {
+    width: 100%;
+}
+
+#solvesTbody tr td {
+    vertical-align: middle;
+}
+
+/* Sidebar scrollabile separatamente se molto lunga */
+#sidebar {
+    max-height: calc(100vh - 56px);
+    /* 56px ~ altezza navbar bootstrap standard */
+    overflow-y: auto;
+}
+
+/* Miglior evidenza riga appena aggiunta */
+.solve-new {
+    animation: flash-bg 1s ease-out;
+}
+
+@keyframes flash-bg {
+    0% {
+        background: #d4edda;
+    }
+
+    100% {
+        background: transparent;
+    }
+}
+
+.brand-logo {
+    height: 40px;
+    /* cambia qui la misura */
+    width: auto;
+    /* mantiene proporzioni */
+    display: block;
+}
+
+/* Pulsante Schermo Intero */
+.btn-fullscreen {
+    background: linear-gradient(135deg, #4cafef, #007bff);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.btn-fullscreen:hover {
+    background: linear-gradient(135deg, #5dc8ff, #339dff);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+.btn-fullscreen:active {
+    transform: scale(0.97);
+}
