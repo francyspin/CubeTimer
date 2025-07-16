@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cube Speed Timer</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Stili personalizzati -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icona.ico" type="image/x-icon">
 
@@ -20,38 +18,33 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid d-flex justify-content-between align-items-center">
-            <!-- Logo + testo -->
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <span class="me-2">Cube Timer</span>
                 <img src="logo.png" alt="Logo Cube Timer" class="brand-logo">
             </a>
 
-            <div class="ms-auto">
-               <button id="fullscreenBtn" class="btn-fullscreen d-none d-md-inline-block">&#9974; Schermo Intero</button>
-            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        </div>
+            <div class="ms-auto">
+                 <button id="fullscreenBtn" class="btn-fullscreen d-none d-md-inline-block">&#9974; Schermo Intero</button>
+            </div>
         </div>
     </nav>
 
-    <!-- CONTENUTO PRINCIPALE A DUE COLONNE -->
     <div class="container-fluid flex-grow-1">
         <div class="row h-100">
 
-            <!-- SIDEBAR -->
             <aside class="col-12 col-md-3 col-xl-2 bg-light p-3 border-end d-flex flex-column" id="sidebar">
 
                 <div class="mb-4">
                     <h5 class="mb-2">🧩 Sessione</h5>
                     <select class="form-select mb-2" id="sessionSelect">
-                        <option selected>3x3x3 Principale</option>
-                        <option>Pratica OLL</option>
-                        <option>Sessione 2x2x2</option>
-                    </select>
-
+                        </select>
                     <button id="manageSessionsBtn" class="btn btn-sm btn-outline-secondary w-100">Gestisci</button>
                 </div>
 
@@ -64,11 +57,8 @@
                                 📊 Stats
                             </button>
                         </h2>
-
                         <div id="collapseStats" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
                             <div class="accordion-body">
-
-
                                 <ul class="list-unstyled mb-0">
                                     <li><strong>Miglior tempo:</strong> <span id="bestTime">--</span></li>
                                     <li><strong>Peggior tempo:</strong> <span id="worstTime">--</span></li>
@@ -98,11 +88,11 @@
                                 <div class="form-check form-switch mb-2">
                                     <input class="form-check-input" type="checkbox" role="switch" id="impostazione1"
                                         checked>
-                                    <label class="form-check-label" for="inspectionTimeToggle">Impostazione 1</label>
+                                    <label class="form-check-label" for="impostazione1">Impostazione 1</label>
                                 </div>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch" id="impostazione2">
-                                    <label class="form-check-label" for="darkModeToggle">Impostazione 2</label>
+                                    <label class="form-check-label" for="impostazione2">Impostazione 2</label>
                                 </div>
                             </div>
                         </div>
@@ -115,25 +105,20 @@
                 </div>
             </aside>
 
-            <!-- AREA PRINCIPALE -->
             <main class="col-12 col-md-9 col-xl-10 p-3" id="mainContent">
 
-                <!-- SCRAMBLE CORRENTE -->
                 <div class="scramble-box p-3 mb-4 text-center">
                     <div class="fw-bold mb-2">Scramble</div>
                     <div id="scrambleText" class="scramble-text">--</div>
                 </div>
 
-                <!-- DISPLAY TIMER -->
                 <div class="timer-display text-center mb-4" id="timerDisplay">00:00.000</div>
 
-                <!-- CONTROLLI TIMER -->
                 <div class="d-flex justify-content-center gap-2 mb-5">
                     <button id="startStopBtn" class="btn btn-success btn-lg">Start</button>
                     <button id="resetBtn" class="btn btn-secondary btn-lg">Reset</button>
                 </div>
 
-                <!-- LISTA SOLVES -->
                 <h3 class="mb-3">Ultimi tempi</h3>
                 <div class="table-responsive">
                     <table class="table table-striped align-middle" id="solvesTable">
@@ -146,176 +131,15 @@
                             </tr>
                         </thead>
                         <tbody id="solvesTbody">
-                            <!-- righe riempite da JS -->
-                        </tbody>
+                            </tbody>
                     </table>
                 </div>
             </main>
         </div>
     </div>
 
-    <!-- Bootstrap JS (bundle = includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script applicazione -->
     <script src="script.js"></script>
 </body>
 
-=======
-<!DOCTYPE html>
-<html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cube Speed Timer</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Stili personalizzati -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icona.ico" type="image/x-icon">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-</head>
-
-<body class="d-flex flex-column min-vh-100">
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            <!-- Logo + testo -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <span class="me-2">Cube Timer</span>
-                <img src="logo.png" alt="Logo Cube Timer" class="brand-logo">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="ms-auto">
-                <button id="fullscreenBtn" class="btn-fullscreen">&#9974; Schermo Intero</button>
-            </div>
-
-        </div>
-        </div>
-    </nav>
-
-    <!-- CONTENUTO PRINCIPALE A DUE COLONNE -->
-    <div class="container-fluid flex-grow-1">
-        <div class="row h-100">
-
-            <!-- SIDEBAR -->
-            <aside class="col-12 col-md-3 col-xl-2 bg-light p-3 border-end d-flex flex-column" id="sidebar">
-    
-    <div class="mb-4">
-        <h5 class="mb-2">🧩 Sessione</h5>
-        <select class="form-select mb-2" id="sessionSelect">
-            <option selected>3x3x3 Principale</option>
-            <option>Pratica OLL</option>
-            <option>Sessione 2x2x2</option>
-        </select>
-
-        <button id="manageSessionsBtn" class="btn btn-sm btn-outline-secondary w-100">Gestisci</button>    
-    </div>
-
-    <div class="accordion" id="sidebarAccordion">
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStats" aria-expanded="true" aria-controls="collapseStats">
-                    📊 Stats
-                </button>
-            </h2>
-            <div id="collapseStats" class="accordion-collapse collapse show" data-bs-parent="#sidebarAccordion">
-                <div class="accordion-body">
-                    <ul class="list-unstyled mb-0">
-                        <li><strong>Miglior tempo:</strong> <span id="bestTime">--</span></li>
-                        <li><strong>Peggior tempo:</strong> <span id="worstTime">--</span></li>
-                        <hr class="my-2">
-                        <li><strong>Media 5:</strong> <span id="avg5">--</span></li>
-                        <li><strong>Media 12:</strong> <span id="avg12">--</span></li>
-                        <li><strong>Media 50:</strong> <span id="avg50">--</span></li>
-                         <hr class="my-2">
-                        <li><strong>Media sessione:</strong> <span id="avgSession">--</span></li>
-                        <li><strong>Solve totali:</strong> <span id="solveCount">0</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSettings" aria-expanded="false" aria-controls="collapseSettings">
-                    ⚙️ Impostazioni
-                </button>
-            </h2>
-            <div id="collapseSettings" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
-                <div class="accordion-body">
-                    <div class="form-check form-switch mb-2">
-                      <input class="form-check-input" type="checkbox" role="switch" id="impostazione1" checked>
-                      <label class="form-check-label" for="inspectionTimeToggle">Impostazione 1</label>
-                    </div>
-                     <div class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="impostazione2">
-                      <label class="form-check-label" for="darkModeToggle">Impostazione 2</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="mt-auto pt-4">
-         <button id="clearSolves" class="btn btn-sm btn-outline-danger w-100">Cancella tempi sessione</button>
-    </div>
-</aside>
-
-            <!-- AREA PRINCIPALE -->
-            <main class="col-12 col-md-9 col-xl-10 p-3" id="mainContent">
-
-                <!-- SCRAMBLE CORRENTE -->
-                <div class="scramble-box p-3 mb-4 text-center">
-                    <div class="fw-bold mb-2">Scramble</div>
-                    <div id="scrambleText" class="scramble-text">--</div>
-                </div>
-
-                <!-- DISPLAY TIMER -->
-                <div class="timer-display text-center mb-4" id="timerDisplay">00:00.000</div>
-
-                <!-- CONTROLLI TIMER -->
-                <div class="d-flex justify-content-center gap-2 mb-5">
-                    <button id="startStopBtn" class="btn btn-success btn-lg">Start</button>
-                    <button id="resetBtn" class="btn btn-secondary btn-lg">Reset</button>
-                </div>
-
-                <!-- LISTA SOLVES -->
-                <h3 class="mb-3">Ultimi tempi</h3>
-                <div class="table-responsive">
-                    <table class="table table-striped align-middle" id="solvesTable">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Tempo</th>
-                                <th>Scramble</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="solvesTbody">
-                            <!-- righe riempite da JS -->
-                        </tbody>
-                    </table>
-                </div>
-            </main>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS (bundle = includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script applicazione -->
-    <script src="script.js"></script>
-</body>
-
->>>>>>> 688445923832a6f87a7a864b48f24e216607e212
 </html>
